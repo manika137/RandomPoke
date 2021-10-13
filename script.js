@@ -11,7 +11,7 @@ var hright = document.getElementById("height");
 var weight = document.getElementById("weight");
 var idd = document.getElementById("idd");
 var img = document.getElementById("img");
-var topp = document.getElementById("topp");
+var top = document.getElementById("top");
 var bottom = document.getElementById("bottom");
 var dis = document.getElementById("description");
 // runs whole function as soon as page opens. We wrap all our code in this function.
@@ -34,7 +34,7 @@ var dis = document.getElementById("description");
         // var id1 = idd.value;
         var id1 = Math.floor(Math.random() * 100 + 1);
         var fullURL = baseURL + pokemon + id1;
-        topp.className = 'content';
+        top.className = 'content';
         bottom.className = 'pannel  rotate';
         dis.innerHTML = "Loading ...";
         httpRequest.onreadystatechange = fillInfo;
@@ -76,7 +76,7 @@ var dis = document.getElementById("description");
                 height.innerHTML = parsed.height;
                 weight.innerHTML = parsed.weight;
                 img.src = parsed.sprites.front_default;
-                topp.className = 'content active';
+                top.className = 'content active';
                 bottom.className = 'pannel active';
                 dis.innerHTML = "Random your Pokemon";
                 //   
